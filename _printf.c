@@ -3,11 +3,11 @@
 void print_buffer(char buffer[], int *buffer_index);
 
 /**
- * _printf - printf function
- * @format: format specifier
- *
- * Return: printed characters
- */
+* _printf - printf function
+* @format: format specifier
+*
+* Return: printed characters
+*/
 
 int _printf(const char *format, ...)
 {
@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 		if (format[i] != '%')
 		{
 			buffer[buffer_index] == format[i];
-			if(buffer_index == BUFFSIZE)
+			if (buffer_index == BUFFSIZE)
 				print_buffer(buffer, &buffer_index);
 			/*write(1, &format[i], 1);*/
 			printed_chars++;
@@ -39,8 +39,9 @@ int _printf(const char *format, ...)
 			precision = get precision(format, &i, list);
 			size = get_size(format, &i);
 			++i;
-			printed = handle_print(format, &i, list, buffer, flags, width, precision, size);
-			if printed == -1)
+			printed = handle_print(format, &i, list, buffer,
+					flags, width, precision, size);
+			if (printed == -1)
 				return (-1);
 			printed_chars = printed_chars + printed;
 		}
@@ -55,10 +56,10 @@ int _printf(const char *format, ...)
 }
 
 /**
- * print_buffer - prints the contents of the buffer
- * @buffer: an array of characters
- * @buffer_index: Index at which to add the next character
- */
+* print_buffer - prints the contents of the buffer
+* @buffer: an array of characters
+* @buffer_index: Index at which to add the next character
+*/
 void print_buffer(char buffer[], int *buffer_index)
 {
 	if (*buffer_index > 0)

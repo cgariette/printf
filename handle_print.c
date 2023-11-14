@@ -12,7 +12,7 @@
  *
  * Return: 1 or 2;
  */
-int handle_print(const char *fmt, int *ind, va_list list, char buffer[], 
+int handle_print(const char *fmt, int *ind, va_list list, char buffer[],
 		int flags, int width, int precision, int size)
 {
 	int i, unknown_lenth = 0, printed_chars = -1;
@@ -44,7 +44,7 @@ int handle_print(const char *fmt, int *ind, va_list list, char buffer[],
 				--(*ind);
 			return (1);
 		}
-		unknown_length += write( 1, &fmt[*ind], 1);
+		unknown_length += write(1, &fmt[*ind], 1);
 		return (unknown_length);
 	}
 	return (printed_chars);

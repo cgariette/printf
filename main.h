@@ -126,4 +126,19 @@ int write_unsgnd(int is_negative, int ind,
 int write_pointer(char buffer[], int ind, int length,
         int width, int flags, char padd, char extra_c, int padd_start);
 
+/* Evaluates if character is printable */
+int is_printable(char c);
+
+/* Appends ascci in hexadecimal code to buffer */
+int append_hexa_code(char ascii_code, char buffer[], int i);
+
+/* checks if character is a digit */
+int is_digit(char c);
+
+/* casts a number to the specified size */
+long int convert_size_number(long int num, int size);
+
+/* casts anumber to specified size */
+
+
 #endif
