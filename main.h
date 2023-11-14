@@ -104,4 +104,26 @@ int print_reverse(va_list types, char buffer[],
 int print_rot13string(va_list types, char buffer[],
         int flags, int width, int precision, int size);
 
+/* write handler */
+int handle_write_char(char c, char buffer[],
+        int flags, int width, int precision, int size);
+
+/* write number */
+int write_number(int is_negative, int ind, char buffer[],
+        int flags, int width, int precision, int size);
+
+/* write number using a buffer */
+int write_num(int ind, char buffer[],
+        int flags, int width, int prec,
+        int length, char padd, char extra_c);
+
+/* writes unsigned number */
+int write_unsgnd(int is_negative, int ind,
+        char buffer[],
+        int flags, int width, int precision, int size);
+
+/* writes a memory address */
+int write_pointer(char buffer[], int ind, int length,
+        int width, int flags, char padd, char extra_c, int padd_start);
+
 #endif
