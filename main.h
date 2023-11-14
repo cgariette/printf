@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
+#define UNUSED(x) (void)(x)
 #define BUFF_SIZE 1024
 
 /* FLAGS */
@@ -66,5 +67,41 @@ int print_hexa_upper(va_list types, char buffer[],
 /* prints hex number in lower or upper */
 iint print_hexa(va_list types, char map_to[], char buffer[],
         int flags, char flag_ch, int width, int precision, int size);
+
+/* print character */
+int print_char(va_list types, char buffer[],
+        int flags, int width, int precision, int size);
+
+/* print a string */
+int print_string(va_list types, char buffer[],
+        int flags, int width, int precision, int size);
+
+/* print percent sign */
+int print_percent(va_list types, char buffer[],
+        int flags, int width, int precision, int size);
+
+/* print int */
+int print_int(va_list types, char buffer[],
+        int flags, int width, int precision, int size);
+
+/* print binary */
+int print_binary(va_list types, char buffer[],
+        int flags, int width, int precision, int size);
+
+/* print Pointer */
+int print_pointer(va_list types, char buffer[],
+        int flags, int width, int precision, int size);
+
+/* print non printable */
+int print_non_printable(va_list types, char buffer[],
+        int flags, int width, int precision, int size);
+
+/* print reverse */
+int print_reverse(va_list types, char buffer[],
+        int flags, int width, int precision, int size);
+
+/* print a string in rot13 */
+int print_rot13string(va_list types, char buffer[],
+        int flags, int width, int precision, int size);
 
 #endif
