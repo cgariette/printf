@@ -18,7 +18,7 @@ return (precision);
 
 precision = 0;
 
-for (cuurent_i += 1; format[current_i] != '\0'; current_i++)
+for (current_i += 1; format[current_i] != '\0'; current_i++)
 {
 if (is_digit(format[current_i]))
 {

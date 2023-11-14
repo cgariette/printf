@@ -50,7 +50,7 @@ int _printf(const char *format, ...);
 
 /* print unsigned int */
 int print_unsigned(va_list types, char buffer[],
-                int flags, int width, int precision, int size);
+		int flags, int width, int precision, int size);
 
 /* prints unsigned number in octal */
 int print_octal(va_list types, char buffer[],
@@ -65,7 +65,7 @@ int print_hexa_upper(va_list types, char buffer[],
         int flags, int width, int precision, int size);
 
 /* prints hex number in lower or upper */
-iint print_hexa(va_list types, char map_to[], char buffer[],
+int print_hexa(va_list types, char map_to[], char buffer[],
         int flags, char flag_ch, int width, int precision, int size);
 
 /* print character */
@@ -140,5 +140,6 @@ long int convert_size_number(long int num, int size);
 
 /* casts anumber to specified size */
 
+long int convert_size_unsgnd(unsigned long int num, int size);
 
 #endif

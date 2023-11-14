@@ -40,5 +40,5 @@ int flags, int width, int precision, int size)
 
 	i++;
 
-	return (write(is_negative, i, buffer, flags, width, precision, size));
+	return (write_number(is_negative, i, buffer, flags, width, precision, size));
 }

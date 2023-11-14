@@ -22,7 +22,7 @@ int flags, char flag_ch, int width, int precision, int size)
 
 	UNUSED(width);
 
-	num = convert_size_insgnd(num, size);
+	num = convert_size_unsgnd(num, size);
 
 	if (num == 0)
 		buffer[i--] = '0';
@@ -35,7 +35,7 @@ int flags, char flag_ch, int width, int precision, int size)
 	num /= 16;
 }
 
-if (flags & F_HASH && init_num != 0)
+if (flags & F_HASH && initial_num != 0)
 {
 	buffer[i--] = flag_ch;
 	buffer[i--] = '0';
